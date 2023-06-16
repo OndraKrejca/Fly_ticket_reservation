@@ -1,0 +1,400 @@
+/* COLOR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+.btn__link {
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+}
+
+#root .nav__cont {
+  height: 3rem;
+  background-color: #1a5f70;
+}
+#root .main__content {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#root .main__content .image__bck {
+  width: 100%;
+  height: 400px;
+  background-image: url(../assets/plane.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#root .main__content .filter__cnt {
+  width: 700px;
+  transform: translateY(-50%);
+  padding: 2rem;
+  border-radius: 15px;
+  background: linear-gradient(0deg, rgb(220, 222, 222) 0%, rgb(241, 237, 237) 50%, rgb(220, 222, 222) 100%);
+}
+#root .main__content .filter__cnt .form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 1.7rem;
+  padding: 1rem;
+  width: 100%;
+}
+#root .main__content .filter__cnt .form .form__input h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #1a5f70;
+}
+#root .main__content .filter__cnt .form .form__input select {
+  width: 100%;
+  height: 2rem;
+  border: transparent;
+}
+#root .main__content .filter__cnt .form .form__input .input__date {
+  width: 100%;
+  height: 2rem;
+  border: transparent;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+#root .main__content .ticket__list {
+  display: grid;
+  grid-template-columns: 1f;
+  gap: 2.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  transform: translateY(-7rem);
+  width: 600px;
+}
+#root .main__content .ticket__list .t-list__div p {
+  font-size: 0.8rem;
+}
+#root .main__content .ticket__list .t-list__div p span {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+#root .main__content .ticket__list .ticket_cnt {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  width: 600px;
+  border-radius: 15px;
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 1px 1px 10px rgba(107, 106, 106, 0.415);
+}
+#root .main__content .ticket__list .ticket_cnt .ticket__header {
+  display: grid;
+  width: 100%;
+  padding: 1.5rem;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-items: center;
+  gap: 2.4rem;
+  background-color: #1a5f70;
+  color: #fff;
+}
+#root .main__content .ticket__list .ticket_cnt .ticket__header .t-header__from,
+#root .main__content .ticket__list .ticket_cnt .ticket__header .t-header__to {
+  font-size: 1.4rem;
+}
+#root .main__content .ticket__list .ticket_cnt .ticket__header .t-header__from span,
+#root .main__content .ticket__list .ticket_cnt .ticket__header .t-header__to span {
+  font-size: 1rem;
+}
+#root .main__content .ticket__list .ticket_cnt .ticket__header .t-header__icon {
+  color: #fff;
+  font-size: 1.4rem;
+}
+#root .main__content .ticket__list .ticket_cnt .ticket__body {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 2rem;
+  align-items: center;
+  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+}
+#root .main__content .ticket__list .ticket_cnt .ticket__body .t-body__time {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#root .main__content .ticket__list .ticket_cnt .ticket__body .t-body__time .t-body__dep span,
+#root .main__content .ticket__list .ticket_cnt .ticket__body .t-body__time .t-body__arr span {
+  font-size: 0.8rem;
+}
+#root .main__content .ticket__list .ticket_cnt .ticket__body .t-body__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#root .main__content .ticket__list .ticket_cnt .ticket__body .t-body__footer .t-body__price {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+#root .main__content .ticket__list .ticket_cnt .ticket__body .t-body__footer .t-body__price span {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+#root .main__content .ticket__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#root .main__content .ticket__content .ticket {
+  width: 700px;
+  padding: 2rem;
+  border-radius: 15px;
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#root .main__content .ticket__content .ticket h3 {
+  font-size: 1.6rem;
+  color: #1a5f70;
+}
+#root .main__content .ticket__content .ticket .ticket__direction {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  border-radius: 15px;
+}
+#root .main__content .ticket__content .ticket .ticket__direction .t-direction__dep {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+#root .main__content .ticket__content .ticket .ticket__direction .t-direction__dep .t-direction__icon {
+  color: #1a5f70;
+  font-size: 1.5rem;
+}
+#root .main__content .ticket__content .ticket .ticket__direction .t-direction__dep p {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+#root .main__content .ticket__content .ticket .ticket__direction .t-direction__dep p span {
+  font-size: 0.8rem;
+}
+#root .main__content .ticket__content .ticket .ticket__direction .t-direction__duration {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  justify-content: center;
+  align-items: center;
+}
+#root .main__content .ticket__content .ticket .ticket__direction .t-direction__duration hr {
+  height: 0.5px;
+}
+#root .main__content .ticket__content .ticket .ticket__direction .t-direction__duration p {
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+#root .main__content .ticket__content .ticket .ticket__direction .t-direction__arr {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 2rem;
+  color: #359eb8;
+  margin-top: 1rem;
+}
+#root .main__content .ticket__content .ticket .ticket__direction .t-direction__arr .t-direction__icon {
+  font-size: 1.5rem;
+}
+#root .main__content .ticket__content .ticket .ticket__direction .t-direction__arr p {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+#root .main__content .ticket__content .ticket .ticket__direction .t-direction__arr p span {
+  font-size: 0.8rem;
+}
+#root .main__content .ticket__props {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin: 3rem 0;
+}
+#root .main__content .ticket__props .ticket__seats h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a5f70;
+  margin-bottom: 1rem;
+}
+#root .main__content .ticket__props .ticket__seats .ticket__box {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+#root .main__content .ticket__props .ticket__seats .ticket__box .ticket__icon {
+  font-size: 1.3rem;
+}
+#root .main__content .ticket__props .ticket__seats .ticket__box .t-seat {
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+#root .main__content .ticket__props .ticket__seats .ticket__box .t-seat:hover {
+  box-shadow: 1px 1px 1px rgb(154, 153, 153);
+}
+#root .main__content .ticket__props .ticket__price h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a5f70;
+  margin-bottom: 1rem;
+}
+#root .main__content .ticket__props .ticket__price p {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #b5bb78;
+}
+#root .main__content .ticket__form h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a5f70;
+  margin-bottom: 1.5rem;
+}
+#root .main__content .ticket__form .t-form__box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+#root .main__content .ticket__form .t-form__box .t-form__input label input {
+  height: 1.5rem;
+}
+#root .main__content .ticket__form .t-btn__box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#root .main__content .ticket__form .t-btn__box .ticket__btn {
+  width: 100px;
+}
+#root .main__content .modal__cont {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.528);
+  top: 0;
+  z-index: 9;
+}
+#root .main__content .modal__cont .modal__box {
+  width: 700px;
+  padding: 2rem;
+  border-radius: 15px;
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#root .main__content .modal__cont .modal__box h3 {
+  color: #1a5f70;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+#root .main__content .modal__cont .modal__box .modal__personal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#root .main__content .modal__cont .modal__box .modal__personal p {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+#root .main__content .modal__cont .modal__box .modal__personal p span {
+  font-size: 0.8rem;
+}
+#root .main__content .modal__cont .modal__box .modal__direction {
+  width: 100%;
+  margin-top: 2rem;
+  transition: all 0.5s ease-in-out;
+}
+#root .main__content .modal__cont .modal__box .modal__direction .m-direction__dep {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+#root .main__content .modal__cont .modal__box .modal__direction .m-direction__dep .m-direction__icon {
+  color: #1a5f70;
+  font-size: 1.5rem;
+}
+#root .main__content .modal__cont .modal__box .modal__direction .m-direction__dep p {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+#root .main__content .modal__cont .modal__box .modal__direction .m-direction__dep p span {
+  font-size: 0.8rem;
+}
+#root .main__content .modal__cont .modal__box .modal__direction .m-direction__duration {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  justify-content: center;
+  align-items: center;
+}
+#root .main__content .modal__cont .modal__box .modal__direction .m-direction__duration hr {
+  height: 0.5px;
+  width: 80%;
+  margin: 0 auto;
+}
+#root .main__content .modal__cont .modal__box .modal__direction .m-direction__duration p {
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+#root .main__content .modal__cont .modal__box .modal__direction .m-direction__arr {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 2rem;
+  color: #359eb8;
+  margin-top: 1rem;
+}
+#root .main__content .modal__cont .modal__box .modal__direction .m-direction__arr .m-direction__icon {
+  font-size: 1.5rem;
+}
+#root .main__content .modal__cont .modal__box .modal__direction .m-direction__arr p {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+#root .main__content .modal__cont .modal__box .modal__direction .m-direction__arr p span {
+  font-size: 0.8rem;
+}
+#root .main__content .modal__cont hr {
+  margin: 3rem 0;
+}
+#root .main__content .modal__cont .modal__seat {
+  display: flex;
+  justify-content: space-between;
+  gap: 8rem;
+}
+#root .main__content .modal__cont .modal__seat p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a5f70;
+}
+#root .main__content .modal__cont .modal__seat p span {
+  color: black;
+  font-size: 0.8rem;
+}
+#root .main__content .modal__cont .modal__seat .m-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+#root .main__content .modal__cont .modal__seat .m-price p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,473 @@
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $color__bck;
+}
+
+.btn__link {
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+}
+
+#root {
+  .nav__cont {
+    height: 3rem;
+    background-color: $color__primary;
+  }
+  .main__content {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .image__bck {
+      width: 100%;
+      height: 400px;
+      background-image: url(../assets/plane.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .filter__cnt {
+      width: 700px;
+      transform: translateY(-50%);
+      padding: 2rem;
+      border-radius: 15px;
+      background: $color__box;
+
+      .form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 1.7rem;
+        padding: 1rem;
+        width: 100%;
+
+        .form__input {
+          h5 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: $color__primary;
+          }
+
+          select {
+            width: 100%;
+            height: 2rem;
+            border: transparent;
+          }
+
+          .input__date {
+            width: 100%;
+            height: 2rem;
+            border: transparent;
+            padding: 0 0.5rem;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .ticket__list {
+      display: grid;
+      grid-template-columns: 1f;
+      gap: 2.5rem;
+      font-family: Arial, Helvetica, sans-serif;
+      transform: translateY(-7rem);
+      width: 600px;
+
+      .t-list__div {
+        p {
+          font-size: 0.8rem;
+          span {
+            font-size: 1.4rem;
+            font-weight: 600;
+          }
+        }
+      }
+
+      .ticket_cnt {
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 2px;
+        width: 600px;
+        border-radius: 15px;
+        background-color: $color__box-item;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        box-shadow: 1px 1px 10px rgba(107, 106, 106, 0.415);
+
+        .ticket__header {
+          display: grid;
+          width: 100%;
+          padding: 1.5rem;
+          grid-template-columns: auto auto auto;
+          align-items: center;
+          justify-items: center;
+          gap: 2.4rem;
+          background-color: $color__primary;
+          color: #fff;
+
+          .t-header__from,
+          .t-header__to {
+            font-size: 1.4rem;
+            span {
+              font-size: 1rem;
+            }
+          }
+
+          .t-header__icon {
+            color: #fff;
+            font-size: 1.4rem;
+          }
+        }
+
+        .ticket__body {
+          display: grid;
+          grid-template-columns: repeat(2, auto);
+          gap: 2rem;
+          align-items: center;
+          padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+
+          .t-body__time {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            .t-body__dep,
+            .t-body__arr {
+              span {
+                font-size: 0.8rem;
+              }
+            }
+          }
+
+          .t-body__footer {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            .t-body__price {
+              font-weight: 600;
+              font-size: 1.4rem;
+
+              span {
+                font-size: 0.8rem;
+                font-weight: 300;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .ticket__content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .ticket {
+        width: 700px;
+        padding: 2rem;
+        border-radius: 15px;
+        background-color: $color__box-item;
+        font-family: Arial, Helvetica, sans-serif;
+
+        h3 {
+          font-size: 1.6rem;
+          color: $color__primary;
+        }
+
+        .ticket__direction {
+          width: 100%;
+          margin-top: 2rem;
+          padding: 2rem;
+          background-color: $color__bck;
+          border-radius: 15px;
+
+          .t-direction__dep {
+            display: grid;
+            grid-template-columns: auto 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 1rem;
+
+            .t-direction__icon {
+              color: $color__primary;
+              font-size: 1.5rem;
+            }
+            p {
+              font-size: 1.3rem;
+              font-weight: 600;
+              span {
+                font-size: 0.8rem;
+              }
+            }
+          }
+
+          .t-direction__duration {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            justify-content: center;
+            align-items: center;
+
+            hr {
+              height: 0.5px;
+            }
+
+            p {
+              padding: 1rem;
+              font-size: 0.9rem;
+            }
+          }
+
+          .t-direction__arr {
+            display: grid;
+            grid-template-columns: auto 1fr 1fr;
+            gap: 2rem;
+            color: $color__secondary;
+            margin-top: 1rem;
+
+            .t-direction__icon {
+              font-size: 1.5rem;
+            }
+            p {
+              font-size: 1.3rem;
+              font-weight: 600;
+              span {
+                font-size: 0.8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .ticket__props {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      margin: 3rem 0;
+
+      .ticket__seats {
+        h4 {
+          font-size: 1.2rem;
+          font-weight: 600;
+          color: $color__primary;
+          margin-bottom: 1rem;
+        }
+
+        .ticket__box {
+          display: flex;
+          gap: 1rem;
+          margin-bottom: 0.5rem;
+
+          .ticket__icon {
+            font-size: 1.3rem;
+          }
+
+          .t-seat {
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+
+            &:hover {
+              box-shadow: 1px 1px 1px rgb(154, 153, 153);
+            }
+          }
+        }
+      }
+
+      .ticket__price {
+        h4 {
+          font-size: 1.2rem;
+          font-weight: 600;
+          color: $color__primary;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          display: flex;
+          align-items: center;
+          font-size: 2rem;
+          font-weight: 600;
+          color: $color__success;
+        }
+      }
+    }
+    .ticket__form {
+      h4 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: $color__primary;
+        margin-bottom: 1.5rem;
+      }
+
+      .t-form__box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-bottom: 2rem;
+
+        .t-form__input {
+          label {
+            input {
+              height: 1.5rem;
+            }
+          }
+        }
+      }
+
+      .t-btn__box {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .ticket__btn {
+          width: 100px;
+        }
+      }
+    }
+
+    .modal__cont {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.528);
+      top: 0;
+      z-index: 9;
+
+      .modal__box {
+        width: 700px;
+        padding: 2rem;
+        border-radius: 15px;
+        background-color: $color__box-item;
+        font-family: Arial, Helvetica, sans-serif;
+
+        h3 {
+          color: $color__primary;
+          font-size: 1.5rem;
+          margin-bottom: 3rem;
+        }
+
+        .modal__personal {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+
+          p {
+            font-size: 1.3rem;
+            font-weight: 600;
+            span {
+              font-size: 0.8rem;
+            }
+          }
+        }
+
+        .modal__direction {
+          width: 100%;
+          margin-top: 2rem;
+          transition: all 0.5s ease-in-out;
+
+          .m-direction__dep {
+            display: grid;
+            grid-template-columns: auto 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 1rem;
+
+            .m-direction__icon {
+              color: $color__primary;
+              font-size: 1.5rem;
+            }
+            p {
+              font-size: 1.3rem;
+              font-weight: 600;
+              span {
+                font-size: 0.8rem;
+              }
+            }
+          }
+
+          .m-direction__duration {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            justify-content: center;
+            align-items: center;
+
+            hr {
+              height: 0.5px;
+              width: 80%;
+              margin: 0 auto;
+            }
+
+            p {
+              padding: 1rem;
+              font-size: 0.9rem;
+            }
+          }
+
+          .m-direction__arr {
+            display: grid;
+            grid-template-columns: auto 1fr 1fr;
+            gap: 2rem;
+            color: $color__secondary;
+            margin-top: 1rem;
+
+            .m-direction__icon {
+              font-size: 1.5rem;
+            }
+            p {
+              font-size: 1.3rem;
+              font-weight: 600;
+              span {
+                font-size: 0.8rem;
+              }
+            }
+          }
+        }
+      }
+      hr {
+        margin: 3rem 0;
+      }
+
+      .modal__seat {
+        display: flex;
+        justify-content: space-between;
+        gap: 8rem;
+
+        p {
+          font-size: 1.3rem;
+          font-weight: 600;
+          color: $color__primary;
+          span {
+            color: black;
+            font-size: 0.8rem;
+          }
+        }
+
+        .m-price {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+
+          p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
