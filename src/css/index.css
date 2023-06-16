@@ -28,11 +28,8 @@ body {
 }
 #root .main__content .image__bck {
   width: 100%;
-  height: 400px;
-  background-image: url(../assets/plane.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  height: 250px;
+  background: linear-gradient(90deg, rgb(26, 95, 112) 0%, rgb(26, 95, 112) 35%, rgb(91, 151, 166) 100%);
 }
 #root .main__content .filter__cnt {
   width: 700px;

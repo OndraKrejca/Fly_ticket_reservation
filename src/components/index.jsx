@@ -6,6 +6,8 @@ import Ticket from './Ticket'
 import FormInput from './Forminput'
 import Modal from './Modal'
 import Itemnum from './Itemnum'
+import Inputairport from './Inputairport'
+import Inputdate from './Inputdate'
 
 export {
   Navbar,
@@ -16,4 +18,6 @@ export {
   FormInput,
   Modal,
   Itemnum,
+  Inputairport,
+  Inputdate,
 }

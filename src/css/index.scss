@@ -29,11 +29,8 @@ body {
 
     .image__bck {
       width: 100%;
-      height: 400px;
-      background-image: url(../assets/plane.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+      height: 250px;
+      background: $color__bar;
     }
 
     .filter__cnt {

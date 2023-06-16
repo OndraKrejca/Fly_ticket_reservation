@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { newItems, dateMinMax } from '../utils/helpers'
 import { loadDestination, submitData, resetTicket } from '../feautures/cart'
+import { Inputairport, Inputdate } from './index'
 import Button from '@mui/material/Button'
 
 const Filterfly = () => {
@@ -34,28 +35,31 @@ const Filterfly = () => {
       <form onSubmit={handleSubmit} className='form'>
         <div className='form__input'>
           <h5>Letiště odletu</h5>
-          <select value={from} name='from' onChange={handleChange}>
-            {fromItems.map((item, id) => {
-              return <option key={id}>{item}</option>
-            })}
-          </select>
+
+          <Inputairport
+            text={'Z'}
+            value={from}
+            name={'from'}
+            onChange={handleChange}
+            fromItems={fromItems}
+          />
         </div>
 
         <div className='form__input'>
           <h5>Cílové letiště</h5>
-          <select name='to' value={to} onChange={handleChange}>
-            {toItems.map((item, id) => {
-              return (
-                <option className='selectdep' key={id}>
-                  {item}
-                </option>
-              )
-            })}
-          </select>
+
+          <Inputairport
+            text={'Do'}
+            value={to}
+            name={'to'}
+            onChange={handleChange}
+            fromItems={toItems}
+          />
         </div>
 
         <div className='form__input'>
           <h5>Odlet</h5>
+
           <input
             type='date'
             name='dep'

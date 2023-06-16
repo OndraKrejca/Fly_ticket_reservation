@@ -8,6 +8,12 @@ $color__box: linear-gradient(
   rgba(241, 237, 237, 1) 50%,
   rgba(220, 222, 222, 1) 100%
 );
+$color__bar: linear-gradient(
+  90deg,
+  rgba(26, 95, 112, 1) 0%,
+  rgba(26, 95, 112, 1) 35%,
+  rgba(91, 151, 166, 1) 100%
+);
 $color__box-item: #fff;
 $color__bck: #f4f4f4;
 $color__error: #ed4439;
